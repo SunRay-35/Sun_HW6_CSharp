@@ -1,0 +1,15 @@
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\bin\Debug\net6.0\Task03.exe
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\bin\Debug\net6.0\Task03.deps.json
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\bin\Debug\net6.0\Task03.runtimeconfig.json
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\bin\Debug\net6.0\Task03.dll
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\bin\Debug\net6.0\Task03.pdb
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\obj\Debug\net6.0\Task03.csproj.AssemblyReference.cache
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\obj\Debug\net6.0\Task03.GeneratedMSBuildEditorConfig.editorconfig
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\obj\Debug\net6.0\Task03.AssemblyInfoInputs.cache
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\obj\Debug\net6.0\Task03.AssemblyInfo.cs
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\obj\Debug\net6.0\Task03.csproj.CoreCompileInputs.cache
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\obj\Debug\net6.0\Task03.dll
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\obj\Debug\net6.0\refint\Task03.dll
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\obj\Debug\net6.0\Task03.pdb
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\obj\Debug\net6.0\Task03.genruntimeconfig.cache
+D:\GeekBrains\Csharp\Nadia\Home_Work\HW_06\Task03\obj\Debug\net6.0\ref\Task03.dll

@@ -36,49 +36,61 @@ void PrintArray(int[,] array)
     Console.WriteLine();
 }
 
+void PrintList (string msg, List<int> list, bool IsRow) // научимся выводить и в строку и в столбик, универсальная функция =)
+{
+    Console.WriteLine(msg);
+    if (IsRow)
+    foreach (int item in list)
+    {
+
+        Console.WriteLine($"{item} "); // здесь делаю вывод, что с list выводить удобней
+    }
+    else
+    foreach (int item in list)
+    {
+
+        Console.Write($"{item} ");
+    }
+    if (!IsRow) Console.WriteLine(); // для красоты
+    Console.WriteLine(); // для красоты
+}
+
 List<int> MaxRow(int[,] array)
 {
-    List<int> rawsMax = new List<int>();
+    List<int> rowsMax = new List<int>(); // я душнила))) и поменял тебе raws на rows, надеюсь я был прав)
     int i = 0;
     do
     {
-        int maxRaw = array[i, 0];
+        int maxRow = array[i, 0];
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            if (array[i, j] > maxRaw)
+            if (array[i, j] > maxRow)
             {
-                maxRaw = array[i, j];
+                maxRow = array[i, j];
             }
         }
-        rawsMax.Add(maxRaw);
+        rowsMax.Add(maxRow);
         i++;
     }
     while (i < array.GetLength(0));
-
-    Console.WriteLine("List with maximum value by raws: ");
-    foreach (int item in rawsMax)
-    {
-
-        Console.WriteLine($"{item} ");
-    }
-    return rawsMax;
+    PrintList ("List with maximum value by rows: ", rowsMax, true);
+    return rowsMax;
 }
 
-int SumOfMaxRaws (List <int> anyList)
+int SumOfMaxRows (List <int> anyList)
 {
-    int [] maxraws = anyList.ToArray();
+    int [] maxrows = anyList.ToArray();
     int sum = 0;
-    for(int i = 0; i < maxraws.Length; i++)
+    for(int i = 0; i < maxrows.Length; i++)
     {
-        sum+=maxraws[i];
+        sum+=maxrows[i];
     }
-    Console.WriteLine($"Sum of Maximums of each raw equals {sum} ");
     return sum;
 }
 
 List<int> MinColumn(int[,] array)
 {
-    List<int> colMin = new List<int>();
+    List<int> colsMin = new List<int>(); // раз rows то и cols
     int j = 0;
     do
     {
@@ -90,19 +102,12 @@ List<int> MinColumn(int[,] array)
                 minCol = array[i, j];
             }
         }
-        colMin.Add(minCol);
+        colsMin.Add(minCol);
         j++;
     }
     while (j < array.GetLength(1));
-
-    Console.WriteLine("List with minimum value by columns: ");
-    foreach (int item in colMin)
-    {
-
-        Console.Write($"{item} ");
-    }
-    Console.WriteLine();
-    return colMin;
+    PrintList("List with minimum value by columns: ", colsMin, false);
+    return colsMin;
 }
 
 int SumOfMinColumns (List <int> anyList)
@@ -113,28 +118,32 @@ int SumOfMinColumns (List <int> anyList)
     {
         sum+=mincolumn[i];
     }
-    Console.WriteLine($"Sum of Minimuns of each column equals {sum} ");
     return sum;
 }
 
 int DiffBetweenSums (int sumMax, int sumMin)
 {
     int maxMinusMin = sumMax - sumMin;
-    Console.WriteLine($"Sum of Maximums by raws minus Sum of Minimums by columns equals {maxMinusMin} ");
     return maxMinusMin;
 }
 
 void Runner()
 {
+    Console.WriteLine(); // для красоты
     int minLim = Prompt("Enter lower threshold for the value of matrix element ");
     int maxLim = Prompt("Enter upper threshold for the value of matrix element ");
+    Console.WriteLine(); // для красоты
     int[,] matrix = CreateArray(4, 6, minLim, maxLim);
     PrintArray(matrix);
-    List<int> maxRaws = MaxRow(matrix);
+    List<int> maxRows = MaxRow(matrix);
     List<int> minColumn = MinColumn(matrix);
-    int sumMaxRaws = SumOfMaxRaws(maxRaws);
+    int sumMaxRows = SumOfMaxRows(maxRows);
     int sumMinColumns = SumOfMinColumns(minColumn);
-    int sumMaxMinusMin = DiffBetweenSums(sumMaxRaws, sumMinColumns);
-
+    int sumMaxMinusMin = DiffBetweenSums(sumMaxRows, sumMinColumns);
+    Console.WriteLine($"Sum of Maximums of each row equals {sumMaxRows} "); // Владимир сказал считать и печатать отдельно =)
+    Console.WriteLine($"Sum of Minimuns of each column equals {sumMinColumns} ");
+    Console.WriteLine($"Sum of Maximums by rows minus Sum of Minimums by columns equals {sumMaxMinusMin} ");
+    Console.WriteLine(); // для красоты
 }
+
 Runner();
